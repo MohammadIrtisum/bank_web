@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="continer">
+        <ul id="myList">
+            <li id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Illum, voluptatem illo.</li>
+            <li class="item">Aspernatur, sequi id.</li>
+            <li class="item">Totam, eius minus?</li>
+            <li class="item">Suscipit, voluptas cumque?</li>
+        </ul>
+        <button id="addNew">Add Item</button>
+    </div>
+    <script>
+        // var items =document.getElementsByClassName("item");
+        // for (let i = 0; i< items.length; i++) {
+        //   var item  = items[i];
+        //   item.addEventListener('click',function(event){
+        //     // console.log(this);
+        //     // console.log(event.target);
+        //     event.target.parentNode.removeChild(event.target);
+        //   })
+           
+        // }
+        document.getElementById('addNew').addEventListener('click',function(event){
+            var itemParent = document.getElementById("myList");
+            var newitem = document.createElement("li");
+            newitem.innerText ="new item";
+            itemParent.appendChild(newitem);
+        })
+
+        document.getElementById("myList").addEventListener("click",function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+        // document.getElementById("first").addEventListener("click",function(){
+        //     console.log("click first");
+        //     // event.stopPropagation();
+        //     event.stopImmediatePropagation();
+        // })
+        // document.getElementById("myList").addEventListener("click",function(){
+        //     console.log("click List");
+        //     // event.stopImmediatePropagation();
+        // })
+        // document.getElementById("continer").addEventListener("click",function(){
+        //     console.log("click Continer");
+        // })
+    </script>
+</body>
+</html>

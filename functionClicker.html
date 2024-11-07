@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="alert('7')">EventCliker</h1>
+    <button onclick="handleclicker()">Click Me</button><br>
+    <br>
+    <button onmousemove="mover()">MouseMove</button>
+    <br><br>
+    <button id="color">Click me-1</button>
+    <button id="Second">Click me-2</button>
+    <button id="Lastbtn">Click me-3</button>
+    <script>
+        document.getElementById("Lastbtn").addEventListener("click",function(){
+            document.body.style.color='tomato'
+        })
+        function handleclicker()
+        {
+            console.log(new Date());
+        }
+        function mover()
+        {
+            console.log("Some one over me");
+        }
+        function color(){
+            document.body.style.backgroundColor ="teal";
+        }
+
+        const firstBtn = document.getElementById("color");
+        firstBtn.onclick = color;
+        const secondBtn = document.getElementById("Second");
+        secondBtn.onclick = function() {
+            console.log("click 2");
+        }
+
+    </script>
+</body>
+</html>
